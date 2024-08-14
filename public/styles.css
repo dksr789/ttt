@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+#download-options {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#progress-container {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #007bff;
+    border-radius: 10px;
+}
+
+#progress-text {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+#please-wait {
+    display: none; /* Hide initially */
+    font-style: italic;
+}
+/* Container for form elements */
+#resource-form {
+background: #fff;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+padding: 20px;
+max-width: 400px;
+width: 100%;
+text-align: center;
+}
+
+/* Styling for input field */
+#resource-id {
+width: calc(100% - 22px);
+padding: 10px;
+border: 2px solid #ddd;
+border-radius: 4px;
+margin-bottom: 15px;
+font-size: 16px;
+transition: border-color 0.3s ease;
+}
+
+#resource-id:focus {
+border-color: #007BFF;
+outline: none;
+}
+
+/* Styling for submit button */
+button {
+background-color: #007BFF;
+color: #fff;
+border: none;
+border-radius: 4px;
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+background-color: #0056b3;
+transform: scale(1.02);
+}
+
+button:active {
+background-color: #004494;
+}
+
+/* Styling for "Please wait" message */
+#please-wait {
+font-style: italic;
+color: #666;
+margin-top: 20px;
+}
