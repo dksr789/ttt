@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return fetch(`/api/resources/${resourceId}/download`)
             .then(response => response.json())
             .then(data => {
-                console.log('Fetched data:', data);  // Log data to inspect the structure
+               
 
                 downloadOptionsContainer.innerHTML = '';  // Clear any previous options
                 progressContainer.style.display = 'none';  // Hide progress bar initially
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             downloadOptionsContainer.appendChild(button);
                         })
                         .catch(err => {
-                            console.error('Error fetching file size:', err);
+                           
                             downloadOptionsContainer.textContent = 'Error fetching file size.';
                         });
                 } else {
