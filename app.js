@@ -1,10 +1,27 @@
 const express = require('express');
 const path = require('path');
 const axios = require('axios');
+const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+// CORS configuration
+const allowedOrigins = [
+    'http://127.0.0.1:5500',
+    'https://fintechlearner.com'
+];
+
+app.use(cors({
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    }
+}));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
